@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 4 Tangerang Selatan</title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/Logo smk hd.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-house"></i></a></li>
+                <li class="dropdown">
+                    <a href="index.html#profile">Profil<i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="index.html#vision">Visi & Misi</a>
+                        <a href="index.html#major">Program Keahlian</a>
+                    </div>
+                </li>                    
+                <li><a href="news.html">Berita</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="contact.html">Hubungi Kami</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+
+<!-- Hubungi Kami -->
+    <section class="location" data-aos="fade-down" data-aos-easeing="ease" data-aos-duration="1000">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7632.0829426174705!2d106.696553!3d-6.291124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fac6bf94f6db%3A0xa29d876a1b8c0acd!2sSMK%20Negeri%204%20Kota%20Tangerang%20Selatan!5e1!3m2!1sid!2sid!4v1694947152741!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-us" data-aos="fade-down" data-aos-easeing="ease" data-aos-duration="1000">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <a href="contact.html"><i class="fas fa-location-dot"></i></a>
+                    <span>
+                        <h5>Jl. Sumatera, Jombang, Kec. Ciputat</h5>
+                        <p>Kota Tangerang Selatan, Banten, ID</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="https://wa.me/6283805959747?text=Halo,%20saya%20ingin%20bertanya%20tentang%20PPDB%20di%20SMKN%204%20Tangsel."><i class="fas fa-phone"></i></a>
+                    <span>
+                        <h5>+62 876543212</h5>
+                        <p>Senin - Jum'at, 06.45 - 15.30</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="mailto:azkazaki29@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <span>
+                        <h5>info@smkn4tangsel.sch.id</h5>
+                        <p>Email Kami</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Toggle Menu JS -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script src="aos-master/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>

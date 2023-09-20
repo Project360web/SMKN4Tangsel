@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: linear-gradient(#464646, #9c9c9c);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#00B894, #43ffd9);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(#008e72, #00daaf);
+}
+
+::-webkit-scrollbar-horizontal{
+    display: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/SMKN 4 Tangsel.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(1.5px);
+    z-index: -1;
+}
+
+.header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.50));
+    z-index: -1;
+}
+
+nav{
+    display: flex;
+    padding: 10px 5%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav img{
+    width: 55px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+/* Gaya untuk submenu */
+.dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #00B894;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Gaya untuk item submenu */
+.dropdown-content a {
+    text-align: left;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+
+/* Gaya untuk item submenu saat dihover */
+.dropdown-content a:hover {
+    background: #fff;
+    color: #00B894;
+}
+
+/* Menampilkan submenu saat item utama dihover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a .fa-solid{
+    font-size: 17px;
+    transition: .5s;
+}
+
+.nav-links .dropdown .fa-solid{
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.nav-links .dropdown:hover .fa-solid{
+    margin-left: 8px;
+    font-size: 12px;
+    transform: rotate(-90deg);
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #00B894;
+    display: block;
+    margin: auto;
+    transition: ease 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/* Apply sticky behavior to the navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 10px 5%;
+    animation: fadeInDown 0.8s ease;
+    background-color: rgba(0, 184, 148, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.sticky img{
+    width: 50px;
+}
+
+.sticky .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.sticky .nav-links ul li:hover::after{
+    width: 100%;
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.text-box{
+    width: 80%;
+    color: #fff;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.text-box h1{
+    margin: 0 0 15px;
+    font-size: 40px;
+}
+
+/* CSS untuk layout tombol Previous dan Next di sisi kiri dan kanan */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Mengatur tombol di ujung horizontal */
+    align-items: center; /* Mengatur tombol di tengah secara vertikal */
+    position: absolute;
+    top: 50%; /* Meletakkan tombol di tengah secara vertikal */
+    transform: translateY(-50%); /* Menggeser tombol ke tengah secara vertikal */
+    left: 0;
+    right: 0;
+    padding: 1rem; /* Ubah padding sesuai keinginan Anda */
+}
+
+.button-container i {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: font-size 0.3s ease, box-shadow 0.3s ease, background .3s ease; /* Transisi shadow box */
+}
+
+.button-container i:hover {
+    background: rgba(0, 184, 148, 0.7);
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); /* Shadow box saat dihover */
+    border-radius: 50%;
+}
+
+.button-container i:first-child {
+    margin-right: auto;
+}
+
+.button-container i:last-child {
+    margin-left: auto;
+}
+
+.wrap {
+    margin: 18px auto;
+    position: relative;
+    width: 1000px;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/7;
+    overflow-x: hidden; /* Menghilangkan scrollbar horizontal */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slidenavi {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slidenavi a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+    transition: width .3s, height .3s;
+}
+
+.slidenavi a.active {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #00B894; /* Ubah warna sesuai keinginan Anda */
+}
+
+.slidenavi a:hover{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    padding: 12px 34px;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.button:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid #00B894;
+    background: #00B894;
+    transition: .5s ease;
+}
+
+nav .fa{
+    display: none;
+}
+
+.show, input{
+    display: none;
+}
+
+@media(max-width: 700px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .wrap {
+        position: relative;
+        width: 360px;
+        margin: 100px auto;
+    }
+
+    .text-box{
+        margin: -80px auto;
+    }
+
+    .text-box h1{
+        font-size: 14px;
+    }
+    
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links ul li a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #00B894;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    .nav-links .dropdown:hover .fa-solid{
+        margin-left: 8px;
+        font-size: 12px;
+        transform: rotate(-180deg);
+    }
+
+    .dropdown:hover .dropdown-content{
+        display: contents;
+    }
+}
+
+/* Profil */
+.profile {
+    width: 80%;
+    max-width: 600px;
+    padding-top: 80px;
+    margin: auto;
+    text-align: center;
+    color: #464646;
+}
+
+.profile-content{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #9c9c9c;
+}
+
+.profile-content h1{
+    font-size: 46px;
+}
+
+.profile-content .fas{
+    font-size: 38px;
+    margin-left: 20px;
+}
+
+/* Visi & Misi */
+.vision{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.vision h1{
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.vision h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.vision p{
+    color: #464646;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.vision .vision-content li{
+    text-align: justify;
+    margin: 20px 0;
+    color: #464646;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* Program Keahlian */
+.major{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 140px;
+}
+
+.major .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.major h1{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.major-col p{
+    color: #464646;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.major-col{
+    text-align: justify;
+    margin: 0 10px 0 10px;
+    flex-basis: 31%;
+    margin-bottom: 8%;
+    padding: 20px 4px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.major-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+footer{
+    box-sizing: border-box;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #00B894;
+}
+
+.main-content{
+    gap: 50px;
+    display: flex;
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.box h2{
+    font-size: 1.12rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content p{
+    color: #fff;
+    text-align: justify;
+}
+
+.left .content .social a{
+    color: #fff;
+    padding: 0 2px;
+}
+
+.left .content .social a:nth-child(2){
+    margin-right: 10px;
+}
+
+.left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #00c69f;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+    background: #fff;
+    color: #00B894;
+}
+
+.center .content .fas{
+    font-size: 1.4375rem;
+    background: #00c69f;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover{
+    background: #fff;
+    color: #00B894;
+}
+
+.center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .email{
+    margin: 10px 0;
+}
+
+.right .content .menu li{
+    list-style: none;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+}
+
+.right .menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.right .menu li a .text{
+    transition: 0.3s;
+}
+
+.right .menu li a .text:hover{
+    color: #43ffd9;
+}
+
+.plus .content .fas{
+    font-size: 1.4375rem;
+    background: #00c69f;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.plus .content .fas:hover{
+    background: #fff;
+    color: #00B894;
+}
+
+.plus .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.plus .content .day{
+    margin: 10px 0;
+}
+
+@media(max-width: 700px){
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .main-content .box{
+        margin: 5px 0;
+    }
+}

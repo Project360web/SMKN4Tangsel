@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 4 Tangerang Selatan</title>
+    <link rel="stylesheet" href="galeristyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/Logo smk hd.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-house"></i></a></li>
+                    <li class="dropdown">
+                        <a href="index.html#profile">Profil<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="index.html#vision">Visi & Misi</a>
+                            <a href="index.html#major">Program Keahlian</a>
+                        </div>
+                    </li>                    
+                    <li><a href="news.html">Berita</a></li>
+                    <li><a href="">Galeri</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="galeri">
+            <h1>Galeri Kami</h1>
+        </div>
+    </section>
+
+<!-- Sekolah -->
+    <section class="school" id="school">
+        <div class="row">
+            <div class="school-col" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">
+                <img src="images/Gerbang.jpg">
+                <div class="layer">
+                    <h3>GERBANG</h3>
+                </div>
+            </div>
+            <div class="school-col" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000">
+                <img src="images/Bagian Dalam.jpg">
+                <div class="layer">
+                    <h3>BAGIAN DALAM</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Galeri -->
+    <section class="gallery">
+        <div class="full-img" id="fullImgBox">
+            <img src="images/IMG_0565.jpg" id="fullImg">
+            <i class="fas fa-xmark" onclick="closeFullImg()"></i>
+        </div>
+        <div class="img-gallery" data-aos="fade-down" data-aos-easing="ease" data-aos-duration="800">
+            <img src="images/IMG_0565.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0566.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0567.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0572.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0573.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0585.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0676.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_1258.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_1364.jpg" onclick="openFullImg(this.src)">
+            <img src="images/Senam.jpeg" onclick="openFullImg(this.src)">
+            <img src="images/Sarapan (3).jpg" onclick="openFullImg(this.src)">
+        </div>
+    </section>
+
+<!-- Sticky -->
+<script>
+    window.addEventListener("scroll", function () {
+    const header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 0);
+});
+</script>
+
+<!-- Full Image Button -->
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+    }
+
+    function closeFullImg(){
+        fullImgBox.style.display = "none";
+    }
+</script>
+
+<script src="aos-master/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <img src="images/LOGO SEKOLAH HD.png" width="50px">
+                <div class="content">
+                    <p>SMK Negeri 4 Tangerang Selatan merupakan salah satu Sekolah Menengah Kejuruan ke-4 yang berada di lingkungan Pemerintahan Kota Tangerang Selatan, dengan bidang keahlian Desain Pemodelan & Informasi Bangunan, Asisten Keperawatan, Multimedia dan Animasi.</p>
+                    <div class="social">
+                        <a href="https://www.youtube.com/@smkn4tangsel130" target="_blank"><span class="fab fa-youtube"></span></a>
+                        <a href="https://www.instagram.com/osis_smkn4tangsel" target="_blank"><span class="fab fa-instagram"></span></a><b>Ikuti Kami</b>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="center box">
+                <h2>Bantuan</h2>
+                <div class="content">
+                    <div class="phone">
+                        <span class="fas fa-phone"></span>
+                        <span class="text">0232123456</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">info@smkn4tangsel.sch.id</span>
+                    </div>
+                    <div class="address">
+                        <span class="fas fa-location-dot"></span>
+                        <span class="text">Jl. Sumatera, Jombang</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="right box">
+                <h2>Menu</h2>
+                <div class="content">
+                    <div class="menu">
+                        <li><a href="index.html"><span class="text">Beranda</span></a></li>
+                        <li><a href="index.html#major"><span class="text">Program Keahlian</span></a></li>
+                        <li><a href="#"><span class="text">Galeri</span></a></li>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="plus box">
+                <h2>Operasional</h2>
+                <div class="content">
+                    <div class="time">
+                        <span class="fas fa-clock"></span>
+                        <span class="text">06.45 - 15.30</span>
+                    </div>
+                    <div class="day">
+                        <span class="fas fa-calendar-days"></span>
+                        <span class="text">Senin - Jum'at</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

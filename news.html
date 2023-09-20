@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 4 Tangerang Selatan</title>
+    <link rel="stylesheet" href="newsstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/Logo smk hd.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-house"></i></a></li>
+                    <li class="dropdown">
+                        <a href="index.html#profile">Profil<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="index.html#vision">Visi & Misi</a>
+                            <a href="index.html#major">Program Keahlian</a>
+                        </div>
+                    </li>                    
+                    <li><a href="news.html">Berita</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+<!-- News -->
+    <div class="news">
+        <div class="news-cont">
+            <header>
+                <h1 class="heading-1">Berita Seadanya</h1>
+                <div class="sub-heading">
+                    <p>Selasa, <span>12 September 2023</span></p>
+                    <p class="important">If You Know, You Know</p>
+                </div>
+            </header>
+
+            <div class="main">
+                <div class="news-home">
+                    <div class="left" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1500">
+                        <img src="images/Sarapan (3).jpg" class="home-img">
+                        <h2 class="heading-2">
+                            Warga SMKN 4 Tangerang Selatan Mengadakan Sarapan Sehat Bersama
+                        </h2>
+                    </div>
+
+                    <div class="right" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="200" data-aos-duration="1500">
+                        <h3 class="heading-3">Berita Terbaru</h3>
+                        <div class="more-list">
+                            <div class="list">
+                                <img src="images/Jalan kaki.jpg" alt="">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, fuga.</p>
+                            </div>
+                            <div class="list">
+                                <img src="images/Senam.jpeg" alt="">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, fuga.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article>
+                    <p data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fuga fugiat eaque voluptate magni quasi exercitationem pariatur aperiam, vitae a delectus sint quo nesciunt? Deleniti beatae veniam praesentium repudiandae corporis saepe fugit, rem eos iure dolorem unde, maiores accusantium nobis enim obcaecati recusandae consequuntur tenetur vel omnis sint possimus sed. Odit reiciendis eos veritatis laudantium voluptatem, tempore facilis necessitatibus nam, repellat quod quae exercitationem pariatur incidunt. Facilis ad cum, harum eos aspernatur incidunt optio modi a iure eveniet maiores animi fugit rerum explicabo cumque reiciendis rem eaque? Cumque culpa iste, laudantium incidunt, quia dolorem sunt veritatis non expedita ipsum omnis.</p>
+                    <p data-aos="fade-right" data-aos-easing="ease" data-aos-delay="200" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minima aperiam optio numquam delectus et, illum suscipit fugiat aliquam dicta eius minus laborum adipisci corporis inventore iure, animi ducimus sit reiciendis itaque! Adipisci eaque iure tenetur voluptatum nihil sapiente incidunt numquam alias reprehenderit. Neque blanditiis nulla, aliquid dicta deserunt nihil repellendus animi quidem recusandae explicabo aliquam veniam sint provident ullam! Voluptatum officiis, laudantium reprehenderit distinctio cupiditate iusto in sequi blanditiis enim est sint. Laborum vel tempore dicta eveniet, saepe, alias animi quod exercitationem culpa repudiandae nemo itaque dolorum et provident cum numquam nostrum veniam veritatis eius, quidem possimus temporibus. Voluptatibus magnam quidem recusandae ratione quibusdam corrupti suscipit perspiciatis debitis sapiente doloribus aperiam, at vero molestiae iste ea laudantium dolore minima ducimus sit unde ex! Adipisci aut totam accusantium veniam, quibusdam excepturi laborum ad neque. Quibusdam in dolorem nam perferendis harum explicabo tenetur labore, unde, aspernatur voluptatem vel, laborum earum possimus.</p>
+
+                </article>
+
+            </div>
+        </div>
+    </section>
+    
+<!-- Toggle Menu JS -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<!-- Sticky -->
+<script>
+    window.addEventListener("scroll", function () {
+    const header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 0);
+});
+</script>
+
+<script src="aos-master/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<!-- Footer -->
+<footer>
+    <div class="main-content">
+        <div class="left box">
+            <img src="images/LOGO SEKOLAH HD.png" width="50px">
+            <div class="content">
+                <p>SMK Negeri 4 Tangerang Selatan merupakan salah satu Sekolah Menengah Kejuruan ke-4 yang berada di lingkungan Pemerintahan Kota Tangerang Selatan, dengan bidang keahlian Desain Pemodelan & Informasi Bangunan, Asisten Keperawatan, Multimedia dan Animasi.</p>
+                <div class="social">
+                    <a href="https://www.youtube.com/@smkn4tangsel130" target="_blank"><span class="fab fa-youtube"></span></a>
+                    <a href="https://www.instagram.com/osis_smkn4tangsel" target="_blank"><span class="fab fa-instagram"></span></a><b>Ikuti Kami</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="center box">
+            <h2>Bantuan</h2>
+            <div class="content">
+                <div class="phone">
+                    <span class="fas fa-phone"></span>
+                    <span class="text">0232123456</span>
+                </div>
+                <div class="email">
+                    <span class="fas fa-envelope"></span>
+                    <span class="text">info@smkn4tangsel.sch.id</span>
+                </div>
+                <div class="address">
+                    <span class="fas fa-location-dot"></span>
+                    <span class="text">Jl. Sumatera, Jombang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right box">
+            <h2>Menu</h2>
+            <div class="content">
+                <div class="menu">
+                    <li><a href="index.html"><span class="text">Beranda</span></a></li>
+                    <li><a href="index.html#major"><span class="text">Program Keahlian</span></a></li>
+                    <li><a href="galeri.html"><span class="text">Galeri</span></a></li>
+                </div>
+            </div>
+        </div>
+
+        <div class="plus box">
+            <h2>Operasional</h2>
+            <div class="content">
+                <div class="time">
+                    <span class="fas fa-clock"></span>
+                    <span class="text">06.45 - 15.30</span>
+                </div>
+                <div class="day">
+                    <span class="fas fa-calendar-days"></span>
+                    <span class="text">Senin - Jum'at</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

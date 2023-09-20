@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+footer{
+    padding: 10px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: #00B894;
+}
+
+.main-content{
+    display: flex;
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    font-size: 1.12rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content p{
+    text-align: justify;
+}
+
+.left .content .social a{
+    padding: 0 2px;
+}
+
+.left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #00c69f;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+    background: #fff;
+    color: #00B894;
+}
+
+.center .content .fas{
+    font-size: 1.4375rem;
+    background: #00c69f;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover{
+    background: #fff;
+    color: #00B894;
+}
+
+.center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .email{
+    margin: 10px 0;
+}
+
+.right .content .menu li{
+    list-style: none;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+}
+
+.right .menu li a{
+    text-decoration: none;
+}
+
+.right .menu li a .text{
+    transition: 0.3s;
+}
+
+.right .menu li a .text:hover{
+    color: #43ffd9;
+}
+
+.plus .content .fas{
+    font-size: 1.4375rem;
+    background: #00c69f;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.plus .content .fas:hover{
+    background: #fff;
+    color: #00B894;
+}
+
+.plus .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.plus .content .day{
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 700px){
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .main-content .box{
+        margin: 5px 0;
+    }
+}
+
